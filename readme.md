@@ -1,4 +1,4 @@
-__A plugin for Gazebo to communicate with SpiNNaker board. __
+**A plugin for Gazebo to communicate with SpiNNaker board.**
 
 Add model of the arm to your Gazebo models.
 ```
@@ -12,7 +12,8 @@ Build:
 #!bin/bash
 echo 'export GAZEBO_PLUGIN_PATH=$/path/to/SpiNNaker/build:$GAZEBO_PLUGIN_PATH' >> /your/.bashrc
 source /your/.bashrc
-cd build/
+cd /path/to/SpiNNaker/build/
+make clean #if not empty
 cmake ../
 make
 ```
@@ -20,6 +21,6 @@ make
 Run:
 ```
 #!bin/bash
-cd SpiNNaker
+cd /path/to/SpiNNaker
 gzserver --verbose armworld.sdf
 ```
